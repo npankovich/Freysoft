@@ -32,16 +32,30 @@ body {
     }
 }
 
+.logo__link-img {
+    height: 40px;
+}
+
+.contact-us-img {
+    width: 18px;
+}
+
 .menu {
     &__btn {
-        width: 16px;
-        height: 14px;
+        // width: 16px;
+        // height: 14px;
         background-color: inherit;
         border: none;
         position: relative;
         &::after {
             content: "";
             position: absolute;
+            width: 16px;
+            height: 2px;
+            background-color: #FFFFFF;
+            box-shadow: 0 5px 0 0 #FFFFFF, 0 10px 0 0 #FFFFFF;
+            top: -13px;
+            right: -1px;
         }
     }
 }

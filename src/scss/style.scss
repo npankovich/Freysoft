@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: 'Helvetica Now Display';
+}
+
+.container {
+    padding: 0 20px;
+}
+
+
+// Header
+
+.header {
+    background: #020213;
+    &__inner {
+        min-height: 135px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__btn {
+        width: 16px;
+        height: 14px;
+        background-color: inherit;
+        border: none;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+        }
+    }
+}

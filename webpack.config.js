@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -15,6 +16,9 @@ const config = {
       template: path.resolve(__dirname, './index.html'),
       filename: 'index.html'
     }),
+      new MiniCssExtractPlugin({
+        filename: "./css/style.bundle.css"
+      }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
@@ -30,22 +34,32 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
-        ],
-        exclude: /\.module\.css$/
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.svg$/,
         use: 'file-loader'
+      },
+      {
+        test: /\.less$/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options : {},
+        },
+          'css-loader',
+          'less-loader'
+        ]
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options : {},
+        },
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.png$/,

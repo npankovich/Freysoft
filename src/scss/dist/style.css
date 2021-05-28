@@ -1,0 +1,308 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: Helvetica;
+  background-color: #020213;
+}
+
+.container {
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 330px;
+  }
+}
+
+.header {
+  background: #020213;
+}
+.header__inner {
+  min-height: 135px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .header__inner {
+    margin-bottom: 40px;
+  }
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .header .logo {
+    margin-right: 335px;
+  }
+}
+.header .logo p {
+  color: #fff;
+  font-size: 17px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.header .logo__link-img {
+  height: 38px;
+  margin-right: 7px;
+}
+@media screen and (min-width: 1440px) {
+  .header .contact-us-vector {
+    display: none;
+  }
+}
+.header .contact-us-vector-img {
+  width: 18px;
+  position: absolute;
+  top: 57px;
+  right: 56px;
+}
+.header .menu {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .header .menu {
+    display: block;
+    position: absolute;
+    left: 570px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header .menu {
+    left: 810px;
+  }
+}
+.header .menu__item {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-right: 36px;
+}
+.header .menu__item:last-child {
+  margin-right: 0;
+}
+.header .menu__item:hover {
+  font-weight: 900;
+  color: #18E8A4;
+  margin-right: 23px;
+}
+.header .contact-us {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .header .contact-us {
+    display: block;
+  }
+  .header .contact-us__btn {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    background: rgba(20, 20, 26, 0.3);
+    color: #FFFFFF;
+    border: 2px solid #18E8A4;
+    border-radius: 383px;
+    width: 156px;
+    height: 48px;
+    cursor: pointer;
+  }
+  .header .contact-us__btn:hover {
+    border: 3px solid #18E8A4;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header .menu-burger {
+    display: none;
+  }
+}
+.header .menu-burger__btn {
+  background-color: inherit;
+  border: none;
+  position: relative;
+}
+.header .menu-burger__btn::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 0 0 #FFFFFF, 0 10px 0 0 #FFFFFF;
+  top: -13px;
+  right: -1px;
+}
+
+.tittle {
+  background-color: #020213;
+  margin-bottom: 42px;
+}
+.tittle__inner {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .tittle__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+}
+.tittle__inner h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 111%;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .tittle__inner h1 {
+    font-size: 56px;
+  }
+  .tittle__inner h1 br {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .tittle__inner h1 {
+    width: 430px;
+    margin-right: 50px;
+  }
+  .tittle__inner h1 br {
+    display: block;
+  }
+}
+.tittle__inner h1 span {
+  color: #18E8A4;
+}
+.tittle__inner p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 155%;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .tittle__inner p {
+    max-width: 536px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .tittle__inner p {
+    font-size: 24px;
+    max-width: 576px;
+  }
+}
+
+.gallery-slider .slick-track {
+  display: flex;
+}
+.gallery-slider .slick-track {
+  overflow: hidden;
+  align-items: flex-start;
+}
+.gallery-slider__item {
+  overflow: hidden;
+  border-radius: 10px;
+  width: auto !important;
+}
+.gallery-slider__item:hover {
+  background: #18E8A4;
+  opacity: 0.9;
+  box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+}
+.gallery-slider__item:hover img {
+  opacity: 0.4;
+}
+@media screen and (min-width: 1440px) {
+  .gallery-slider__item {
+    padding: 0 5px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .gallery-slider__item {
+    padding: 0 10px;
+  }
+}
+.gallery-slider__second .slick-track {
+  transform: none;
+}
+.gallery-slider__third {
+  margin-bottom: 42px;
+}
+.gallery-slider__button {
+  background: #18E8A4;
+  box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  width: 172px;
+  height: 40px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 120%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: auto;
+  margin-bottom: 63px;
+}
+
+.about-the-company {
+  background: #FFFFFF;
+  padding: 48px 0;
+}
+.about-the-company__tittle {
+  margin-bottom: 31px;
+}
+.about-the-company__tittle h2 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 90%;
+  letter-spacing: -1px;
+  color: #202523;
+}
+.about-the-company__text p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  color: #545460;
+}
+.about-the-company__text p:first-child {
+  margin-bottom: 32px;
+}

@@ -225,23 +225,207 @@ body {
         // width: 119px!important;
         // height: 67px!important;
         // overflow: hidden;
-        &:hover {
-            background: #18E8A4;
-            opacity: 0.9;
-            box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
-            border-radius: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        width: auto!important;
+        @media screen and (min-width: 1440px) {
+            &:hover {
+                background: #18E8A4;
+                opacity: 0.9;
+                box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
+                border-radius: 10px;
+            }
         }
 
         &:hover img {
             opacity: 0.4;
         }
-        @media screen and (min-width: 1920px) {
-              width: 378px!important;
-              height: 212px!important;
-              padding: 0 20px;
-              overflow: hidden;
-              border-radius: 10px;
+        @media screen and (min-width: 1440px) {
+            padding: 0 5px;
         }
+
+        @media screen and (min-width: 1920px) {
+            padding: 0 10px;
+            //   width: 378px!important;
+            //   height: 212px!important;
+        }
+    }
+    &__second {
+        .slick-track {
+            transform: none;
+        }
+    }
+
+    &__third {
+        margin-bottom: 42px;
+    }
+
+    &__button {
+        background: #18E8A4;
+        box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
+        border-radius: 10px;
+        width: 172px;
+        height: 40px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 13px;
+        line-height: 120%;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin: auto;
+        margin-bottom: 63px;
+        @media screen and (min-width: 768px) {
+            margin-left: 74px;
+        }
+    }
+
+    // &__third {
+    //     background: linear-gradient(180deg, rgba(2, 2, 19, 0) 0%, #020213 100%);
+    // }
+}
+// .gallery-slider__third {
+//     // background: linear-gradient(180deg, rgba(2, 2, 19, 0) 0%, #020213 100%);
+//         background: url('../img/Fade.png');
+// }
+
+
+
+
+
+// About the company ============================ 
+
+.about-the-company {
+    background: #FFFFFF;
+    padding: 48px 0 16px 0;
+    @media screen and (min-width: 768px) {
+        padding: 80px 0 48px 0;
+    }
+    
+    &__tittle {
+        margin-bottom: 31px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 48px;
+        }
+        h2 {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 90%;
+            letter-spacing: -1px;
+            color: #202523;
+        }
+    }
+    &__text {
+        p {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 180%;
+            color: #545460;
+            margin-bottom: 32px;
+        }
+    }
+    &__block {
+        display: flex;
     }
 }
 
+
+// FreySoft process ============================ 
+
+.freySoft-process {
+    background: #D5D4D9;
+    box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09),
+    0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09);
+    padding: 64px 0 42px 0;
+    &__discription {
+        &__tittle h3 {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: -1px;
+            color: #202523;
+            margin-bottom: 28px;
+        }
+        &__text {
+            p {
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 180%;
+                color: #485563;
+                margin-bottom: 13px;
+            }
+        }
+    }
+    &__inner {
+        &__item {
+            background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(117.15deg, #1BD1FC 0%, #316DD1 100%);
+            box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 
+            0px 4px 2px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.09);
+            border-radius: 16px;
+            width: 280px;
+            height: 514px;
+            padding: 32px 25px 107px 25px;
+            position: relative;
+            z-index: 1;
+            &__text {
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 110%;
+                text-transform: uppercase;
+                color: #545460;
+                margin-bottom: 16px;
+            }
+            &__tittle {
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 32px;
+                line-height: 110%;
+                letter-spacing: -1px;
+                color: #202523;
+                margin-bottom: 24px;
+            }
+            &__discription {
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 25px;
+                color: #596067;
+                position: relative;
+                z-index: 2;
+            }
+            &__img {
+                position: relative;
+                z-index: 1;
+                bottom: 119px;
+                left: 64px;
+                img {
+                    height: 185px;
+                }
+            }
+        }
+        &__img {
+            position: relative;
+            z-index: 2;
+            bottom: 75px;
+            &__desktop {
+                display: none;
+            }
+        }
+    }
+}

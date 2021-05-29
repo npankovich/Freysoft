@@ -19,10 +19,9 @@ body {
 .container {
     padding: 0 20px;
     @media screen and (min-width: 1440px) {
-        padding: 0 90px;
-    }
-    @media screen and (min-width: 1920px) {
-        padding: 0 330px;
+        max-width: 1260px;
+        margin: auto;
+        padding: 0;
     }
 }
 
@@ -74,8 +73,8 @@ body {
         display: none;
         @media screen and (min-width: 1440px) {
             display: block;
-            position: absolute;
-            left: 570px;
+            // position: absolute;
+            // left: 570px;
         }
         @media screen and (min-width: 1920px) {
             left: 810px;
@@ -119,6 +118,7 @@ body {
                 width: 156px;
                 height: 48px;
                 cursor: pointer;
+                margin-left: 290px;
                 &:hover {
                     border: 3px solid #18E8A4;
                 }
@@ -209,17 +209,20 @@ body {
 }
 
 
+// Slider  ============================ 
+
+.slick-track {
+    display: flex;
+}
+
+.slick-track {
+    overflow: hidden;
+    align-items: flex-start;
+}
+
 
 // Gallery-slider  ============================ 
 .gallery-slider {
-    .slick-track {
-        display: flex;
-    }
-    
-    .slick-track {
-        overflow: hidden;
-        align-items: flex-start;
-    }
     &__item {
         // text-align: center;
         // width: 119px!important;
@@ -300,16 +303,30 @@ body {
 // About the company ============================ 
 
 .about-the-company {
+    .container {
+        @media screen and (min-width: 1440px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     background: #FFFFFF;
-    padding: 48px 0 16px 0;
+    padding: 48px 0 48px 0;
     @media screen and (min-width: 768px) {
-        padding: 80px 0 48px 0;
+        padding: 80px 0 80px 0;
     }
     
     &__tittle {
         margin-bottom: 31px;
         @media screen and (min-width: 768px) {
             margin-bottom: 48px;
+            br {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1440px) {
+            br {
+                display: block;
+            }
         }
         h2 {
             font-family: Helvetica;
@@ -319,9 +336,31 @@ body {
             line-height: 90%;
             letter-spacing: -1px;
             color: #202523;
+            @media screen and (min-width: 1440px) {
+                font-size: 62px;
+            }
+        }
+    }
+    &__block {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
         }
     }
     &__text {
+        &:first-child p {
+            margin-bottom: 32px;
+        }
+        @media screen and (min-width: 768px) {
+            &:first-child p {
+                margin-right: 32px;
+            }
+        }
+        @media screen and (min-width: 1140px) {
+            &:first-child p {
+                margin-right: 40px;
+            }
+        }
         p {
             font-family: Helvetica;
             font-style: normal;
@@ -329,13 +368,13 @@ body {
             font-size: 16px;
             line-height: 180%;
             color: #545460;
-            margin-bottom: 32px;
+            @media screen and (min-width: 1440px) {
+                width: 400px;
+            }
         }
     }
-    &__block {
-        display: flex;
-    }
 }
+
 
 
 // FreySoft process ============================ 
@@ -345,7 +384,18 @@ body {
     box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09),
     0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09);
     padding: 64px 0 42px 0;
+    @media screen and (min-width: 768px) {
+        padding: 80px 0 50px 0;
+    }
     &__discription {
+        margin-bottom: 42px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 32px;
+        }
+        @media screen and (min-width: 1440px) {
+            display: flex;
+            margin-bottom: 54px;
+        }
         &__tittle h3 {
             font-family: Helvetica;
             font-style: normal;
@@ -355,6 +405,19 @@ body {
             letter-spacing: -1px;
             color: #202523;
             margin-bottom: 28px;
+            @media screen and (min-width: 768px) {
+                margin-bottom: 32px;
+                br {
+                    display: none;
+                }
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 62px;
+                margin-right: 232px;
+                br {
+                    display: block;
+                }
+            }
         }
         &__text {
             p {
@@ -365,10 +428,41 @@ body {
                 line-height: 180%;
                 color: #485563;
                 margin-bottom: 13px;
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: 1440px) {
+                    font-size: 24px;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                width: 50%;
+                &:first-child p {
+                    margin-right: 52px;
+                }
+            }
+            @media screen and (min-width: 1440px) {
+                width: 612px;
+                &:first-child p {
+                    margin-right: 0;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        &__inner {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            @media screen and (min-width: 1440px) {
+                flex-direction: column;
             }
         }
     }
     &__inner {
+        @media screen and (min-width: 1440px) {
+            display: flex;
+        }
         &__item {
             background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(117.15deg, #1BD1FC 0%, #316DD1 100%);
             box-shadow: 0px 32px 16px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 
@@ -379,6 +473,21 @@ body {
             padding: 32px 25px 107px 25px;
             position: relative;
             z-index: 1;
+            margin-right: 10px;
+            @media screen and (min-width: 768px) {
+                width: 354px;
+                height: 514px;
+                padding: 32px 20px 182px 20px;
+            }
+            @media screen and (min-width: 1440px) {
+                width: 620px;
+                height: 457px;
+                padding: 100px 24px 210px 24px;
+                margin-right: 0;
+                &:first-child {
+                    margin-right: 20px; 
+                }
+            }
             &__text {
                 font-family: Helvetica;
                 font-style: normal;
@@ -414,6 +523,10 @@ body {
                 z-index: 1;
                 bottom: 119px;
                 left: 64px;
+                @media screen and (min-width: 768px) {
+                    bottom: 35px;
+                    left: 100px;
+                }
                 img {
                     height: 185px;
                 }
@@ -423,8 +536,19 @@ body {
             position: relative;
             z-index: 2;
             bottom: 75px;
-            &__desktop {
-                display: none;
+            background: url('../img/steps\ flow.png');
+            height: 175px;
+            @media screen and (min-width: 768px) {
+                background: url('../img/steps\ flow\ \(1\).png') center;
+                background-repeat: no-repeat;
+            }
+            @media screen and (min-width: 1440px) {
+                background: url('../img/Group\ 15459.png') center;
+                background-repeat: no-repeat;
+            }
+            @media screen and (min-width: 1440px) {
+                background: url('../img/Group\ 15459.png') center;
+                background-repeat: no-repeat;
             }
         }
     }
